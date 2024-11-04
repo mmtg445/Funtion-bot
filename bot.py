@@ -1,4 +1,4 @@
-```python
+
 import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, CallbackContext, CallbackQueryHandler
@@ -75,7 +75,7 @@ def button_handler(update: Update, context: CallbackContext) -> None:
 
 def main():
     # Initialize Telegram bot
-    updater = Updater("YOUR_BOT_TOKEN")
+    BOT_TOKEN = os.getenv("BOT_TOKEN")
     dispatcher = updater.dispatcher
 
     # Core commands
