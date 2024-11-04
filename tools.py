@@ -455,4 +455,3 @@ def community_tips(update: Update, context: CallbackContext) -> None:
         "📚 Organize a book exchange."
     ]
     update.message.reply_text(f"💬 Community Tip: {random.choice(tips)}")
-```
