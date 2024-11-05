@@ -1,4 +1,3 @@
-
 import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, CallbackContext, CallbackQueryHandler
@@ -74,8 +73,9 @@ def button_handler(update: Update, context: CallbackContext) -> None:
         query.edit_message_text(text="📺 Send me the anime ID you want details about using /get_anime_details <anime_id>.")
 
 def main():
-    # Initialize Telegram bot
+    # Initialize Telegram bot with token from environment
     BOT_TOKEN = os.getenv("BOT_TOKEN")
+    updater = Updater(BOT_TOKEN)
     dispatcher = updater.dispatcher
 
     # Core commands
